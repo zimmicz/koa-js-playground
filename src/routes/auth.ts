@@ -1,6 +1,6 @@
 import type Koa from "koa";
 import invariant from "tiny-invariant";
-import { users } from "../users";
+import { users } from "../config/users";
 
 const loginHandler = async (ctx: Koa.Context) => {
   const { username, password } = ctx.request.body;

@@ -1,6 +1,6 @@
 import type Koa from "koa";
 import invariant from "tiny-invariant";
-import { users } from "../users";
+import { users } from "../config/users";
 
 const messageHandler = (ctx: Koa.Context) => {
   const { token } = ctx.request.headers;

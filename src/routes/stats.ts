@@ -1,5 +1,5 @@
 import type Koa from "koa";
-import { admin } from "../users";
+import { admin } from "../config/users";
 
 const statsHandler = async (ctx: Koa.Context) => {
   const { token } = ctx.request.headers;
