@@ -1,3 +1,3 @@
-const MESSAGE_FILE = "message.json";
+const MESSAGE_FILE = "data/message.json";
 
 export { MESSAGE_FILE };
