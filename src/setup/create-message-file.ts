@@ -5,8 +5,8 @@ const createMessageFileIfNotPresent = async () => {
   try {
     const fh = await fs.open(MESSAGE_FILE, "a");
     await fh.close();
-  } catch (err) {
-    console.log("Failed to create message file", err);
+  } catch (e) {
+    console.error("Failed to create message file", e);
   }
 };
 
