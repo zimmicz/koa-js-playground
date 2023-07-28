@@ -1,5 +1,7 @@
+import fs from "fs/promises";
 import type Koa from "koa";
 import { admin } from "../config/users";
+import { MESSAGE_FILE } from "../config/messages";
 
 const statsHandler = async (ctx: Koa.Context) => {
   const { token } = ctx.request.headers;
@@ -10,10 +12,11 @@ const statsHandler = async (ctx: Koa.Context) => {
   }
 
   ctx.status = 200;
-  ctx.response.body = {
-    numberOfCalls: 5,
-    lastMessage: "hello world",
-  };
+  ctx.response.body = JSON.parse(await readFile());
+};
+
+const readFile = async () => {
+  return await fs.readFile(MESSAGE_FILE, "utf8");
 };
 
 export { statsHandler };
