@@ -7,6 +7,7 @@ const messageHandler = async (ctx: Koa.Context) => {
   const { token } = ctx.request.headers;
   const { from, to, message } = ctx.request.body;
 
+  // TODO find a better way to check payloads (using zod?)
   invariant(token, "token is required");
   invariant(from, "from is required");
   invariant(to, "to is required");
