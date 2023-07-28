@@ -1,0 +1,23 @@
+{
+  "name": "koa-js-playground",
+  "version": "1.0.0",
+  "description": "koa.js playground",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zimmicz/koa-js-playground.git"
+  },
+  "keywords": [
+    "koa",
+    "node"
+  ],
+  "author": "Michal Zimmermann <zimmicz@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zimmicz/koa-js-playground/issues"
+  },
+  "homepage": "https://github.com/zimmicz/koa-js-playground#readme"
+}
