@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { MESSAGE_FILE } from "./config/messages";
+import { MESSAGE_FILE } from "../config/messages";
 
 const createMessageFileIfNotPresent = async () => {
   try {

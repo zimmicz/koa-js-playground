@@ -8,16 +8,20 @@ import {
   statsHandler,
 } from "./routes";
 
-const app = new Koa();
-const router = new Router();
+const createServer = () => {
+  const app = new Koa();
+  const router = new Router();
 
-router.post("/message", messageHandler);
-router.get("/stats", statsHandler);
-router.post("/auth/login", loginHandler);
-router.post("/auth/logout", logoutHandler);
+  router.post("/message", messageHandler);
+  router.get("/stats", statsHandler);
+  router.post("/auth/login", loginHandler);
+  router.post("/auth/logout", logoutHandler);
 
-app
-  .use(Parser())
-  .use(router.routes())
-  .use(router.allowedMethods())
-  .listen(3000);
+  app
+    .use(Parser())
+    .use(router.routes())
+    .use(router.allowedMethods())
+    .listen(3000);
+};
+
+export { createServer };

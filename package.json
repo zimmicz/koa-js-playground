@@ -4,7 +4,7 @@
   "description": "koa.js playground",
   "main": "index.ts",
   "scripts": {
-    "serve": "nodemon --watch './**/*.ts' --exec 'ts-node' src/server.ts"
+    "serve": "nodemon --watch './**/*.ts' --exec 'ts-node' src/bootstrap.ts"
   },
   "repository": {
     "type": "git",
