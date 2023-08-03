@@ -7,6 +7,7 @@ const createMessageFileIfNotPresent = async () => {
     await fh.close();
   } catch (e) {
     console.error("Failed to create message file", e);
+    throw e;
   }
 };
 
